@@ -15,7 +15,8 @@ Task **two** is in this github repo.
 ```
 # Yelp API Node.js App
 
-This Node.js application allows you to search for businesses and get business details from the Yelp API. It is built using the Express framework and uses EJS for templating.
+This Node.js application allows you to search for businesses and get business details from the Yelp API.
+It is built using the Express framework and uses EJS for templating.
 
 ## Prerequisites
 
@@ -59,10 +60,13 @@ It will run on http://localhost:3000/
 
 The application has two main endpoints:
 
-* `/api/v1/businesses/search`: This endpoint allows you to search for businesses by name and location. The request parameters are `term` (the name of the business) and `location` (the location of the business).
-* `/api/v1/businesses/:id`: This endpoint allows you to get the details of a specific business. The request parameter is `id` (the ID of the business).
+* `/api/v1/businesses/search`: This endpoint allows you to search for businesses by name and location.
+The request parameters are `term` (the name of the business) and `location` (the location of the business).
+* `/api/v1/businesses/:id`: This endpoint allows you to get the details of a specific business.
+The request parameter is `id` (the ID of the business).
 
-To use the application, you can make requests to these endpoints using your favorite HTTP client. For example, you can use cURL to search for businesses in New York City by running the following command:
+To use the application, you can make requests to these endpoints using your favorite HTTP client. For example,
+you can use cURL to search for businesses in New York City by running the following command:
 
 ```
 curl -X GET "http://localhost:3000/api/v1/businesses/search?term=Starbucks&location=New+York+City"
