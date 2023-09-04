@@ -76,8 +76,3 @@ curl -X GET "http://localhost:3000/api/v1/businesses/qcnoyytlFIuqlcjDXkXJiw"
 
 This will return the details of the business with the ID `qcnoyytlFIuqlcjDXkXJiw`.
 
-## Code Explanation
-
-The code for this application is divided into several files:
-
-* `index.js`: This is the main entry point of the application.
