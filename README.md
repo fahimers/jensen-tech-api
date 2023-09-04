@@ -3,6 +3,11 @@ A tech test for Jensen Education
 
 Task **one** should be found here: 
 https://www.db-fiddle.com/f/85wKWxy4FKrziaT4TLgTZZ/1
+![image](https://github.com/fahimers/jensen-tech-api/assets/29772677/63d4a081-f803-46f5-b5c2-7e9943933333)
+
+![image](https://github.com/fahimers/jensen-tech-api/assets/29772677/76014569-3652-49d5-ac5e-93c3fbd8c0ef)
+
+
 
 Task **two** is in this github repo.
 ![image](https://github.com/fahimers/jensen-tech-api/assets/29772677/b181989f-ea43-4bd8-83af-193fadf2dd14)
