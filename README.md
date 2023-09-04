@@ -28,10 +28,24 @@ To run this application, you will need the following:
 
 1. Clone this repository to your local machine.
 2. Install the dependencies by running `npm install`.
-3. Create a `.env` file in the root directory of the project and add your Yelp API key to it. The format of the `.env` file should be as follows:
+3. Create a `.env` file in the root directory of the project, you can create it from env.example and add your Yelp API key to it. The format of the `.env` file should be as follows:
 
 ```
 YELP_API_KEY=<your_yelp_api_key>
+
+# App >>
+NODE_ENV=development
+PORT=3000
+# << App
+
+# JWT >>
+JWT_SECRET=secret
+JWT_TTL=24h
+# << JWT
+
+# Yelp public API
+YELP_API_KEY=fxITvnxV2kVzizZd5rGcdE3UX7-Jx43T4iAeVtwEzuKSGljN8NXyPVHuTs8L72FiBpPlmqjyflp7z0mXk0uuEuLEqBs7GbWN2VF-laR9aS41fNQ8HYtw1Uq4WR31ZHYx
+YELP_ENDPOINT=https://api.yelp.com/v3
 ```
 
 4. Start the application by running `npm run start:dev`.
