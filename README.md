@@ -5,6 +5,7 @@ Task one should be found here:
 https://www.db-fiddle.com/f/85wKWxy4FKrziaT4TLgTZZ/1
 
 Task two is in this github repo.
+![image](https://github.com/fahimers/jensen-tech-api/assets/29772677/b181989f-ea43-4bd8-83af-193fadf2dd14)
 
 ```
 # Yelp API Node.js App
