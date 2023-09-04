@@ -43,7 +43,8 @@
                     <form id="form-details">
                         <div class="form-group">
                             <label for="alias">Business ID or alias</label>
-                            <input id="alias" type="text" name="path" class="form-control" placeholder="qcnoyytlFIuqlcjDXkXJiw">
+                            <input id="alias" type="text" name="path" class="form-control"
+                                   placeholder="qcnoyytlFIuqlcjDXkXJiw">
                         </div>
                     </form>
                 </div>
@@ -127,12 +128,17 @@
         data.delete('path');
         const urlParams = new URLSearchParams(data);
 
-        fetch(`/api/v1/${query.endpoint}/${path}?` + urlParams.toString()).then(r => r.json())
+        fetch(`/api/v1/${query.endpoint}/${path}?` + urlParams.toString())
+            .then(r => r.json())
             .then((response) => {
+                if (response.errors) {
+                    alert(response.message);
+                    return;
+                }
+
                 generateTable(response.id ? [response] : response.businesses)
-            }).catch(e => {
-            alert(e.message);
-        });
+            })
+            .catch(e => alert(e.message));
     });
 
     document.getElementById('v-pills-tab').addEventListener('click', function (e) {

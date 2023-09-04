@@ -1,5 +1,5 @@
-// Import the YelpAPI module from the '@src/libs/yelp' package
-const YelpAPI = require('@src/libs/yelp');
+// Import the YelpAPI module from the '~src/libs/yelp' package
+const YelpAPI = require('~src/libs/yelp');
 
 // Create an instance of the YelpAPI class
 const api = new YelpAPI();
@@ -12,7 +12,7 @@ class BuisnessesController {
       // Use the 'api' instance to call the 'searchBusinesses' method with parameters from the request
       const data = await api.searchBusinesses(
         req.query?.term, // Search term from the request query parameters
-        req.params.location // Location from the request parameters
+        req.params.location, // Location from the request parameters
       );
 
       // Send the retrieved data as a JSON response
