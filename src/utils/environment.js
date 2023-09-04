@@ -1,7 +1,7 @@
 const Env = {
-  test: "test",
-  dev: "development",
-  prod: "production",
+  test: 'test',
+  dev: 'development',
+  prod: 'production',
 };
 
 const AppEnv = process.env.NODE_ENV || Env.dev;

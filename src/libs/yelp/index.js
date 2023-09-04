@@ -1,4 +1,6 @@
-const axios = require('axios'); // Import the Axios library for making HTTP requests
+const axios = require('axios');
+const { YelpApiError } = require('~src/errors');
+const logger = require('~src/utils/logger');
 
 class YelpAPI {
   constructor() {
@@ -10,7 +12,7 @@ class YelpAPI {
   async searchBusinesses(term, location, limit = 10) {
     const params = {
       location,
-      limit
+      limit,
     };
 
     if (term) params.term = term; // Add the search term to the parameters if provided
@@ -26,7 +28,12 @@ class YelpAPI {
 
       return response.data; // Return the response data (businesses)
     } catch (error) {
-      throw new Error(`Yelp API request failed: ${error.message}`); // Handle and throw an error if the request fails
+      logger.error(error);
+
+      throw new YelpApiError(
+        `Yelp API request failed: ${error.message}`,
+        error.response.status,
+      ); // Handle and throw an error if the request fails
     }
   }
 
@@ -44,7 +51,12 @@ class YelpAPI {
 
       return response.data; // Return the response data (business details)
     } catch (error) {
-      throw new Error(`Yelp API request failed: ${error.message}`); // Handle and throw an error if the request fails
+      logger.error(error);
+
+      throw new YelpApiError(
+        `Yelp API request failed: ${error.message}`,
+        error.response.status,
+      ); // Handle and throw an error if the request fails
     }
   }
 }

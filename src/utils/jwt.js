@@ -1,10 +1,10 @@
-const jwt = require("jsonwebtoken");
-const log = require("@src/utils/logger");
+const jwt = require('jsonwebtoken');
+const log = require('~src/utils/logger');
 
-const JwtAlgorithm = "HS256";
+const JwtAlgorithm = 'HS256';
 
 async function VerifyToken(bearer) {
-  const token = bearer.split(" ");
+  const token = bearer.split(' ');
   if (!token[1]) {
     return null;
   }

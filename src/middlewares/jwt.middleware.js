@@ -1,5 +1,5 @@
-const { StatusCodes, ReasonPhrases } = require("http-status-codes");
-const { VerifyToken } = require("@src/utils/jwt");
+const { StatusCodes, ReasonPhrases } = require('http-status-codes');
+const { VerifyToken } = require('~src/utils/jwt');
 
 async function ValidateJwt(req, res, next) {
   if (!req.headers.authorization) {
