@@ -29,7 +29,7 @@ To run this application, you will need the following:
 YELP_API_KEY=<your_yelp_api_key>
 ```
 
-4. Start the application by running `npm start`.
+4. Start the application by running `npm run start:dev`.
 
 ## Usage
 
