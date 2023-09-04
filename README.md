@@ -28,7 +28,7 @@ To run this application, you will need the following:
 ## Installation
 
 1. Clone this repository to your local machine.
-2. Install the dependencies by running `npm install`.
+2. Install the dependencies by running **npm install**.
 3. Create a `.env` file in the root directory of the project, you can create it from env.example and
 add your Yelp API key to it. The format of the `.env` file should be as follows:
 
@@ -77,6 +77,5 @@ This will return a list of businesses that match the search criteria. You can th
 ```
 curl -X GET "http://localhost:3000/api/v1/businesses/qcnoyytlFIuqlcjDXkXJiw"
 ```
-
 This will return the details of the business with the ID `qcnoyytlFIuqlcjDXkXJiw`.
 
