@@ -1,14 +1,14 @@
-const { StatusCodes } = require("http-status-codes");
-const BaseError = require("./base.error");
+const { StatusCodes, ReasonPhrases } = require('http-status-codes');
+const BaseError = require('./base.error');
 
 class BadRequestError extends BaseError {
   constructor(
-    description = "Bad request",
+    description = ReasonPhrases.BAD_REQUEST,
     statusCode = StatusCodes.BAD_REQUEST,
-    isOperational = true
+    isOperational = true,
   ) {
-    super("BadRequestError", statusCode, isOperational, description);
+    super('BadRequestError', statusCode, isOperational, description);
   }
 }
 
-export default BadRequestError;
+module.exports = BadRequestError;

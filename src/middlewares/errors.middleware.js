@@ -1,9 +1,9 @@
-const logger = require("@src/utils/logger");
-const BaseError = require("../errors/base.error");
+const logger = require('@src/utils/logger');
+const BaseError = require('../errors/base.error');
 
 async function ErrorHandler(err, req, res, next) {
   const response = {
-    message: "Internal server error",
+    message: 'Internal server error',
     errors: [],
   };
 
@@ -12,7 +12,7 @@ async function ErrorHandler(err, req, res, next) {
     response.message = err.message;
   }
 
-  logger.error(err.message + ". " + response.errors.join(", "));
+  logger.error(err.message + '. ' + response.errors.join(', '));
 
   res.json(response);
 }

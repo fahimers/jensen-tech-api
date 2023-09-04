@@ -1,0 +1,26 @@
+{
+  "moduleFileExtensions": [
+    "js",
+    "json"
+  ],
+  "rootDir": "./src",
+  "testRegex": ".*\\.spec\\.js$",
+  "transform": {
+    "^.+\\.js$": "babel-jest"
+  },
+  "coverageDirectory": "./coverage",
+  "collectCoverageFrom": [
+    "**/*.js",
+    "!**/index.js",
+    "!**/*.module.js"
+  ],
+  "testEnvironment": "node",
+  "roots": [
+    "<rootDir>/"
+  ],
+  "moduleNameMapper": {
+    "^~libs(|/.*)$": "<rootDir>/libs/$1",
+    "^~errors(|/.*)$": "<rootDir>/errors/$1",
+    "^~utils(|/.*)$": "<rootDir>/utils/$1"
+  }
+}

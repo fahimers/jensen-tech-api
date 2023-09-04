@@ -7,7 +7,7 @@ class BuisnessesController {
     try {
       const data = await api.searchBusinesses(
         req.query?.term,
-        req.params.location
+        req.params.location,
       );
 
       res.json(data);
