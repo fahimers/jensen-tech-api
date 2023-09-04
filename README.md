@@ -35,6 +35,9 @@ YELP_API_KEY=<your_yelp_api_key>
 ```
 
 4. Start the application by running `npm run start:dev`.
+It will run on http://localhost:3000/
+![image](https://github.com/fahimers/jensen-tech-api/assets/29772677/24492124-d539-41e2-8eff-77eb720bf9d2)
+
 
 ## Usage
 
