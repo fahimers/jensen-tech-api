@@ -1,4 +1,4 @@
-const logger = require('@src/utils/logger');
+const logger = require('~src/utils/logger');
 const BaseError = require('../errors/base.error');
 
 async function ErrorHandler(err, req, res, next) {

@@ -1,5 +1,5 @@
-// Import the YelpAPI module from the '@src/libs/yelp' package
-const YelpAPI = require('@src/libs/yelp');
+// Import the YelpAPI module from the '~src/libs/yelp' package
+const YelpAPI = require('~src/libs/yelp');
 
 // Create an instance of the YelpAPI class
 const api = new YelpAPI();

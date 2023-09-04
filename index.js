@@ -1,7 +1,7 @@
 require('module-alias/register');
 
-const app = require('@src/app');
-const logger = require('@src/utils/logger');
+const app = require('~src/app');
+const logger = require('~src/utils/logger');
 const { exec } = require('child_process');
 
 const PORT = process.env.PORT || 3000;

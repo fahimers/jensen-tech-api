@@ -1,6 +1,6 @@
 const axios = require('axios');
-const { YelpApiError } = require('@src/errors');
-const logger = require('@src/utils/logger');
+const { YelpApiError } = require('~src/errors');
+const logger = require('~src/utils/logger');
 
 class YelpAPI {
   constructor() {

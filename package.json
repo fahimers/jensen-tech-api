@@ -33,6 +33,6 @@
   },
   "_moduleAliases": {
     "type": "module",
-    "@src": "./src"
+    "~src": "./src"
   }
 }

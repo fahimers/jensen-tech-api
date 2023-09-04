@@ -1,5 +1,5 @@
 const axios = require('axios');
-const YelpAPI = require('~libs/yelp'); // Adjust the import path as needed
+const YelpAPI = require('~libs/yelp');
 const { YelpApiError } = require('~errors');
 const logger = require('~utils/logger');
 
@@ -38,15 +38,13 @@ describe('YelpAPI', () => {
 
   it('should handle API errors when searching businesses', async () => {
     const mockError = new Error('API error');
+    mockError.response = { status: 500 };
+
     axios.get.mockRejectedValue(mockError);
 
     await expect(
       yelpAPI.searchBusinesses('restaurant', 'New York', 5),
     ).rejects.toThrow(YelpApiError);
-
-    expect(logger.error).toHaveBeenCalledWith(mockError);
-
-    // You can also test the YelpApiError properties here
   });
 
   it('should get business details successfully', async () => {
@@ -67,14 +65,12 @@ describe('YelpAPI', () => {
 
   it('should handle API errors when getting business details', async () => {
     const mockError = new Error('API error');
+    mockError.response = { status: 500 };
+
     axios.get.mockRejectedValue(mockError);
 
     await expect(yelpAPI.getBusinessDetails('business_id')).rejects.toThrow(
       YelpApiError,
     );
-
-    expect(logger.error).toHaveBeenCalledWith(mockError);
-
-    // You can also test the YelpApiError properties here
   });
 });

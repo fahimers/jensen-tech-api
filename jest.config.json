@@ -5,13 +5,14 @@
   "transform": {
     "^.+\\.js$": "babel-jest"
   },
-  "coverageDirectory": "./coverage",
+  "coverageDirectory": "../coverage",
   "collectCoverageFrom": ["**/*.js", "!**/index.js", "!**/*.module.js"],
   "testEnvironment": "node",
   "roots": ["<rootDir>/"],
   "moduleNameMapper": {
     "^~libs(|/.*)$": "<rootDir>/libs/$1",
     "^~errors(|/.*)$": "<rootDir>/errors/$1",
-    "^~utils(|/.*)$": "<rootDir>/utils/$1"
+    "^~utils(|/.*)$": "<rootDir>/utils/$1",
+    "^~src(|/.*)$": "<rootDir>/$1"
   }
 }

@@ -1,6 +1,6 @@
 const morgan = require('morgan');
-const logger = require('@src/utils/logger');
-const { IsDevEnv } = require('@src/utils/environment');
+const logger = require('~src/utils/logger');
+const { IsDevEnv } = require('~src/utils/environment');
 
 const stream = {
   // Use the http severity

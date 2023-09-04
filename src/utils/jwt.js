@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const log = require('@src/utils/logger');
+const log = require('~src/utils/logger');
 
 const JwtAlgorithm = 'HS256';
 
