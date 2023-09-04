@@ -56,4 +56,4 @@ This will return the details of the business with the ID `qcnoyytlFIuqlcjDXkXJiw
 
 The code for this application is divided into several files:
 
-* `index.js`: This is the main entry point of the application. It
+* `index.js`: This is the main entry point of the application.
